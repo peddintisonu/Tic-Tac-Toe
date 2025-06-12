@@ -1,0 +1,151 @@
+/* General Body & Text Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+  padding-top: 40px;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Styles for the Buttons and Inputs */
+.game-mode-selector button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #4caf50;
+  background-color: white;
+  color: #4caf50;
+  border-radius: 5px;
+}
+
+.game-mode-selector button:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+#nameInputArea {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e6e6fa;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nameInputArea div {
+  margin-bottom: 15px;
+}
+
+#nameInputArea label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+#nameInputArea input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#nameInputArea button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #6a5acd;
+  background-color: white;
+  color: #6a5acd;
+  border-radius: 5px;
+}
+
+#nameInputArea button:hover {
+  background-color: #6a5acd;
+  color: white;
+}
+
+/* Game Board and Cell Styles */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+  width: 310px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #add8e6;
+  border: 2px solid #4682b4;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  /* Added for smooth color change */
+  transition: background-color 0.3s ease;
+}
+
+/* ADDED: Style for the winning cells */
+.winning-cell {
+  background-color: #fafad2; /* LightGoldenRodYellow */
+}
+
+.cell .fa-times {
+  color: #ff6347;
+}
+
+.cell .fa-circle {
+  color: #32cd32;
+}
+
+/* Status Text and Game Buttons */
+#statusText {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+#restartButton,
+#changeModeBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #ff4500;
+  background-color: white;
+  color: #ff4500;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#restartButton:hover,
+#changeModeBtn:hover {
+  background-color: #ff4500;
+  color: white;
+}
+
+/* A helper class to hide things */
+.hidden {
+  display: none;
+}
+
+/* Media query for smaller screens to make it responsive */
+@media (max-width: 400px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    width: 250px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+}
