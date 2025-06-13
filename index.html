@@ -1,57 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 0 V100 M80 0 V100 M0 20 H100 M0 80 H100' stroke='black' stroke-width='10'/></svg>"
+      />
+      <link rel="stylesheet" href="styles.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      />
+      <title>Tic Tac Toe Fun</title>
+    </head>
 
-<head>
-  <title>Tic Tac Toe Fun</title>
-  <!-- Favicon and CSS links -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 0 V100 M80 0 V100 M0 20 H100 M0 80 H100' stroke='black' stroke-width='10'/></svg>">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <body>
+      <h1>Tic Tac Toe Game</h1>
 
-<body>
+      <!-- First screen the user sees to pick a game mode -->
+      <div class="game-mode-selector">
+        <button id="friendBtn">Play vs Friend</button>
+        <button id="botBtn">Play vs Bot</button>
+      </div>
 
-  <h1>Tic Tac Toe Game</h1>
+      <!-- Second screen for users to enter their names -->
+      <div id="nameInputArea" class="hidden">
+        <div id="player1InputDiv">
+          <label for="player1Name">Player 1 (X) Name:</label>
+          <input type="text" id="player1Name" placeholder="Enter Name" />
+        </div>
+        <div id="player2InputDiv">
+          <label for="player2Name">Player 2 (O) Name:</label>
+          <input type="text" id="player2Name" placeholder="Enter Name" />
+        </div>
+        <button id="startGameBtn">Start Playing</button>
+      </div>
 
-  <!-- First screen the user sees to pick a game mode -->
-  <div class="game-mode-selector">
-    <button id="friendBtn">Play vs Friend</button>
-    <button id="botBtn">Play vs Bot</button>
-  </div>
+      <!-- The main game board area -->
+      <div id="gameArea" class="hidden">
+        <div id="theBoard" class="board">
+          <div class="cell" data-index="0"></div>
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+        </div>
+        <p id="statusText">X's turn</p>
+        <button id="restartButton">Play Again</button>
+        <button id="changeModeBtn">Change Mode</button>
+      </div>
 
-  <!-- Second screen for users to enter their names -->
-  <div id="nameInputArea" class="hidden">
-    <div id="player1InputDiv">
-      <label for="player1Name">Player 1 (X) Name:</label>
-      <input type="text" id="player1Name" placeholder="Enter Name">
-    </div>
-    <div id="player2InputDiv">
-      <label for="player2Name">Player 2 (O) Name:</label>
-      <input type="text" id="player2Name" placeholder="Enter Name">
-    </div>
-    <button id="startGameBtn">Start Playing</button>
-  </div>
-
-  <!-- The main game board area -->
-  <div id="gameArea" class="hidden">
-    <div id="theBoard" class="board">
-      <div class="cell" data-index="0"></div>
-      <div class="cell" data-index="1"></div>
-      <div class="cell" data-index="2"></div>
-      <div class="cell" data-index="3"></div>
-      <div class="cell" data-index="4"></div>
-      <div class="cell" data-index="5"></div>
-      <div class="cell" data-index="6"></div>
-      <div class="cell" data-index="7"></div>
-      <div class="cell" data-index="8"></div>
-    </div>
-    <p id="statusText">X's turn</p>
-    <button id="restartButton">Play Again</button>
-    <button id="changeModeBtn">Change Mode</button>
-  </div>
-
-  <script src="script.js"></script>
-
-</body>
-
+      <script src="script.js"></script>
+    </body>
+  </html>
 </html>
