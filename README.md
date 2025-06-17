@@ -1,4 +1,4 @@
-# Tic Tac Toe 
+# Tic Tac Toe Game
 
 A simple, colorful, and responsive Tic Tac Toe game created with HTML, CSS, and vanilla JavaScript. This project is designed to be a fun, lightweight browser game that's easy to run and play.
 
